@@ -1,13 +1,4 @@
-# Neon Night City Chase
-
-A 2D car racing game set in a futuristic neon-lit city. Built with Vite and Phaser.js.
-
-## Features
-- Futuristic city at night with neon lights
-- Player car, traffic, and power-ups
-- Dynamic weather (rain, fog)
-- Destructible environments
-- Customizable neon-lit cars
+# Puzzle Game
 
 ## Getting Started
 
