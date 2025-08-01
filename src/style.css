@@ -1,0 +1,293 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  color: #fff;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+canvas {
+  border: 4px solid #00fff7;
+  box-shadow: 0 0 40px #00fff7, 0 0 80px #1a2980;
+  margin: 30px auto;
+  display: block;
+  border-radius: 18px;
+  background: rgba(20, 20, 40, 0.7);
+}
+.phaser-text {
+  text-shadow: 0 0 8px #00fff7, 0 0 16px #1a2980;
+}
+
+/* Super good neon city night theme background */
+.app-bg {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: linear-gradient(135deg, #0f2027 0%, #2c5364 40%, #1a2980 100%), url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80');
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+}
+.custom-icon {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffe600;
+  text-shadow: 0 0 10px #fff700, 0 0 30px #ffe600;
+  z-index: 2;
+  letter-spacing: 0.1em;
+  user-select: none;
+}
+.fun-zone {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #ffe600 40%, #ff00cc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px #ffe600, 0 0 20px #ff00cc;
+  margin-top: 0.2em;
+  letter-spacing: 0.15em;
+  text-align: left;
+  user-select: none;
+}
+.fun-zone-large {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  font-size: 2.7rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #ffe600 40%, #ff00cc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 24px #ffe600, 0 0 60px #ff00cc, 0 0 18px #fff;
+  letter-spacing: 0.18em;
+  z-index: 2;
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  line-height: 1.1;
+  border-radius: 18px;
+  box-shadow: 0 0 32px 8px #ff00cc44, 0 0 12px 2px #ffe60044;
+  padding: 0.2em 0.7em 0.2em 0.7em;
+  border: 2.5px solid #ffe60088;
+  background-color: #181818cc;
+}
+.fun-zone-fun {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  margin-bottom: 0.2em;
+}
+.fun-zone-zone {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+#game-root {
+  position: relative;
+  z-index: 1;
+}
+.dev-credit {
+  position: absolute;
+  left: 30px;
+  bottom: 18px;
+  font-size: 0.72rem;
+  color: #ffe600;
+  text-shadow: 0 0 8px #fff700, 0 0 18px #ffe600;
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  opacity: 0.92;
+  z-index: 10;
+  letter-spacing: 0.08em;
+}
+/* Theme select polish */
+.theme-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 40px;
+  margin-top: 40px;
+  margin-left: 100px;
+}
+.theme-btn {
+  border-radius: 16px;
+  background: linear-gradient(90deg, #fffbe6 0%, #ffe600 60%, #ff00cc 100%);
+  color: #222;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+  box-shadow: 0 0 18px #ffe600, 0 0 32px #ff00cc;
+  padding: 0.7em 2.2em;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  min-width: 220px;
+  text-align: center;
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+}
+.theme-btn:hover {
+  transform: scale(1.08);
+  background: linear-gradient(90deg, #ffe600 0%, #ff00cc 100%);
+  color: #fff;
+  box-shadow: 0 0 32px #ffe600, 0 0 60px #ff00cc;
+}
+
+.spin-bar-container {
+  position: absolute;
+  top: 80px;
+  right: 40px;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+.spin-bar {
+  background: #181818cc;
+  border-radius: 18px;
+  box-shadow: 0 0 18px #00fff7, 0 0 32px #ff00cc;
+  padding: 18px 8px 18px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  border: 2.5px solid #00fff7;
+  margin-bottom: 18px;
+  position: relative;
+}
+.spin-point {
+  font-size: 1.3rem;
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  color: #ffe600;
+  text-shadow: 0 0 8px #ffe600, 0 0 18px #ff00cc;
+  padding: 6px 0;
+  width: 60px;
+  text-align: center;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #222 60%, #ffe60022 100%);
+  margin: 0 auto;
+}
+.spin-bar-arrow {
+  position: absolute;
+  right: -28px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.2rem;
+  color: #00fff7;
+  text-shadow: 0 0 8px #00fff7, 0 0 18px #ff00cc;
+  pointer-events: none;
+}
+.spin-btn {
+  font-size: 1.1rem;
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  color: #fff;
+  background: linear-gradient(90deg, #00fff7 0%, #ff00cc 100%);
+  border: none;
+  border-radius: 12px;
+  padding: 8px 22px;
+  box-shadow: 0 0 12px #00fff7, 0 0 18px #ff00cc;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 0.5em;
+}
+.spin-btn:active {
+  transform: scale(0.96);
+  background: linear-gradient(90deg, #ff00cc 0%, #00fff7 100%);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
